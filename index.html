@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Games Planet Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top">
+
+<div class="logo">
+18%
+</div>
+
+<div class="title">
+<h2>Games Planet Calculator</h2>
+<p>GST • हिसाब • शेयर</p>
+</div>
+
+</header>
+
+<div class="card">
+
+<input
+id="itemName"
+placeholder="Item का नाम (जैसे HDMI Converter)"
+>
+
+<input
+id="display"
+type="text"
+value="0"
+readonly
+>
+
+<div class="modeButtons">
+
+<button onclick="setMode('normal')" class="active">
+Non GST
+</button>
+
+<button onclick="setMode('gstadd')">
++18% GST
+</button>
+
+<button onclick="setMode('gstremove')">
+GST निकालें
+</button>
+
+<button onclick="setMode('discount')">
+18% Discount
+</button>
+
+</div>
+
+<div class="result">
+
+<div>
+<span>Amount</span>
+<h3 id="amount">₹0.00</h3>
+</div>
+
+<div>
+<span>GST</span>
+<h3 id="gst">₹0.00</h3>
+</div>
+
+<div>
+<span>Final</span>
+<h3 id="final">₹0.00</h3>
+</div>
+
+</div>
+
+</div>
+
+<div class="tools">
+
+<button onclick="shareWhatsApp()">
+WhatsApp
+</button>
+
+<button onclick="shareResult()">
+Share
+</button>
+
+<button onclick="window.print()">
+Print
+</button>
+
+<button onclick="takeScreenshot()">
+Screenshot
+</button>
+
+</div>
+
+<div class="calculator">
+
+<button onclick="clearAll()">AC</button>
+
+<button onclick="backspace()">⌫</button>
+
+<button onclick="press('(')">(</button>
+
+<button onclick="press(')')">)</button>
+
+<button onclick="press('7')">7</button>
+
+<button onclick="press('8')">8</button>
+
+<button onclick="press('9')">9</button>
+
+<button onclick="press('/')">÷</button>
+
+<button onclick="press('4')">4</button>
+
+<button onclick="press('5')">5</button>
+
+<button onclick="press('6')">6</button>
+
+<button onclick="press('*')">×</button>
+
+<button onclick="press('1')">1</button>
+
+<button onclick="press('2')">2</button>
+
+<button onclick="press('3')">3</button>
+
+<button onclick="press('-')">−</button>
+
+<button onclick="press('0')">0</button>
+
+<button onclick="press('00')">00</button>
+
+<button onclick="press('.')">.</button>
+
+<button onclick="calculate()">=</button>
+
+</div>
+
+<button class="historyBtn" onclick="saveHistory()">
+✔ हिसाब History में Save करें
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
